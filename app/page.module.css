@@ -1,5 +1,63 @@
 .main {
   flex: 1;
+  font-family: var(--font-family);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  max-width: 1440px;
+  height: 768px;
+  background-image: url(/img/main-img@1x.webp);
+  background-image: image-set(
+    url(/img/main-img@1x.webp) 1x,
+    url(/img/main-img@2x.webp) 2x
+  );
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.textBlock {
+  position: absolute;
+  top: 260px;
+  left: 64px;
+  width: 574px;
+  height: 176px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.66667;
+  color: var(--inputs);
+  margin-bottom: 16px;
+}
+
+.description {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: var(--inputs);
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  padding: 16px 48.5px;
+  width: 173px;
+  height: 56px;
+  background: var(--grey-green);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--white);
 }
 
 .errorContainer {
