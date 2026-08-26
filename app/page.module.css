@@ -8,12 +8,13 @@
   display: flex;
   max-width: 1440px;
   height: 768px;
-  background-image: url(/img/main-img@1x.webp);
-  background-image: image-set(
-    url(/img/main-img@1x.webp) 1x,
-    url(/img/main-img@2x.webp) 2x
-  );
-  background-size: contain;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(/img/main-img@1x.webp);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    image-set(url(/img/main-img@1x.webp) 1x, url(/img/main-img@2x.webp) 2x);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 auto;
