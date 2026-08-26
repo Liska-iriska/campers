@@ -1,0 +1,26 @@
+.main {
+  flex: 1;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  padding: 64px;
+  gap: 24px;
+}
+
+.errorTitle {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.errorDescription {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  text-align: center;
+}

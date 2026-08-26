@@ -1,5 +1,8 @@
-import type { Metadata } from "next";
+//import type { Metadata } from "next";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 
 // export const metadata: Metadata = {
@@ -22,6 +25,20 @@ import "./globals.css";
 //   },
 // };
 
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
   // modal,
@@ -30,15 +47,12 @@ export default function RootLayout({
   // modal: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      // className={`${#.variable} `}
-    >
+    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <body>
         <TanStackProvider>
-          {/* <Header /> */}
+          <Header />
           <main>{children}</main>
-          {/* <Footer /> */}
+          <Footer />
         </TanStackProvider>
       </body>
     </html>
