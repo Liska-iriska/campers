@@ -1,5 +1,5 @@
 import { api } from "./api";
-import { Camper, FiltersResponse, CampersResponse } from "@/types/camper";
+import { Camper, CampersResponse } from "@/types/camper";
 
 export const fetchCatalog = async (
   location?: string,

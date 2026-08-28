@@ -1,0 +1,39 @@
+.layoutStyle {
+  display: flex;
+  margin: 0 auto;
+  gap: 64px;
+  max-width: 1440px;
+}
+
+.aside {
+  padding: 120px 0 0;
+  margin: 0 auto;
+}
+
+.children {
+  width: 100%;
+}
+
+.menuList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  margin-bottom: 16px;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: block;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.menuLink:hover {
+  background-color: #444;
+  color: #ddd;
+}

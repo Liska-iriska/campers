@@ -84,9 +84,11 @@
   color: var(--white);
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   border: 1px solid var(--green-hover);
 }
-.link:hover {
+.link:hover,
+.link:focus {
   background: var(--green-hover);
 }

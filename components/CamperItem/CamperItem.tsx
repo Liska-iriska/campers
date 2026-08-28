@@ -7,6 +7,13 @@ type Props = {
   item: Camper;
 };
 
+function formatLabel(text: string): string {
+  return text
+    .split("_")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
 const CamperItem = ({ item }: Props) => {
   console.log("CamperItem id:", item.id);
   return (
@@ -57,10 +64,10 @@ const CamperItem = ({ item }: Props) => {
             <svg className={css.icon} width="20" height="20">
               <use href="/sprite.svg#icon-form" />
             </svg>
-            {item.form}
+            {formatLabel(item.form)}
           </p>
         </div>
-        <Link className={css.link} href={`/catalog/${item.id}`}>
+        <Link className={css.link} href={`/catalog/${item.id}`} target="_blank">
           Show more
         </Link>
       </div>
