@@ -13,7 +13,6 @@ const Catalog = async () => {
 
   return (
     <section>
-      <h1>Catalog List</h1>
       {response?.campers?.length > 0 && (
         <CamperList campers={response.campers} />
       )}

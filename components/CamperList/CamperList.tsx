@@ -8,11 +8,13 @@ type Props = {
 
 const CamperList = ({ campers }: Props) => {
   return (
-    <ul>
-      {campers.map((camper) => (
-        <CamperItem key={camper.id} item={camper} />
-      ))}
-    </ul>
+    <section className={css.section}>
+      <ul className={css.list}>
+        {campers.map((camper) => (
+          <CamperItem key={camper.id} item={camper} />
+        ))}
+      </ul>
+    </section>
   );
 };
 
