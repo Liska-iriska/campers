@@ -26,13 +26,68 @@ const CamperDetailsClient = () => {
   if (!camper) return null;
 
   return (
-    <div>
-      {camper.gallery.length > 0 && (
-        <CamperGallery gallery={camper.gallery} alt={camper.name} />
-      )}
-      <h2>{camper.name}</h2>
-      <p>{camper.description}</p>
-    </div>
+    <section className={css.section}>
+      <div className={css.container}>
+        <div className={css.swiper}>
+          {camper.gallery.length > 0 && (
+            <CamperGallery gallery={camper.gallery} alt={camper.name} />
+          )}
+        </div>
+        <div className={css.sectionTwo}>
+          <div className={css.cont}>
+            <h2 className={css.heading}>{camper.name}</h2>
+            <div className={css.headingTwo}>
+              <p>
+                <svg className={css.iconRate} width="16" height="16">
+                  <use href="/sprite.svg#icon-rating" />
+                </svg>
+                {camper.rating}({camper.totalReviews} Reviews)
+              </p>
+              <p>
+                <svg className={css.icon} width="16" height="16">
+                  <use href="/sprite.svg#icon-map" />
+                </svg>
+                {camper.location}
+              </p>
+            </div>
+            <p className={css.price}>€{camper.price}</p>
+            <p className={css.description}>{camper.description}</p>
+          </div>
+          <div className={css.cont}>
+            <h2 className={css.heading}>Vehicle details</h2>
+            <ul className={css.list}>
+              <li className={css.amenity}>{camper.transmission}</li>
+              <li className={css.amenity}>{camper.engine}</li>
+              {camper.amenities.map((amenity) => (
+                <li className={css.amenity} key={amenity}>
+                  {amenity === "ac" || amenity === "tv"
+                    ? amenity.toUpperCase()
+                    : amenity}
+                </li>
+              ))}
+            </ul>
+            <div className={css.table}>
+              <ul className={css.tableTwo}>
+                <li className={css.tableItem}>Form</li>
+                <li className={css.tableItem}>Length</li>
+                <li className={css.tableItem}>Width</li>
+                <li className={css.tableItem}>Height</li>
+                <li className={css.tableItem}>Tank</li>
+                <li className={css.tableItem}>Consumption</li>
+              </ul>
+              <ul className={css.tableThree}>
+                <li className={css.tableItem}>{camper.form}</li>
+                <li className={css.tableItem}>{camper.length}</li>
+                <li className={css.tableItem}>{camper.width}</li>
+                <li className={css.tableItem}>{camper.height}</li>
+                <li className={css.tableItem}>{camper.tank}</li>
+                <li className={css.tableItem}>{camper.consumption}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
