@@ -2,12 +2,9 @@
 
 import css from "./EmptyPage.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
-interface Props {
-  onClearFilters: () => void;
-}
-
-export default function EmptyState({ onClearFilters }: Props) {
+export default function EmptyState() {
   return (
     <div className={css.overlay}>
       <div className={css.errorContainer}>
@@ -26,15 +23,15 @@ export default function EmptyState({ onClearFilters }: Props) {
           Try adjusting your search or clearing some filters.
         </p>
         <div className={css.btns}>
-          <button onClick={onClearFilters} className={css.btn}>
+          <Link href="/catalog" className={css.btn}>
             <svg className={css.icon} width="24" height="24">
               <use href="/sprite.svg#icon-close" />
             </svg>
             Clear filters
-          </button>
-          <button onClick={onClearFilters} className={css.link}>
+          </Link>
+          <Link href="/catalog" className={css.link}>
             View all campers
-          </button>
+          </Link>
         </div>
       </div>
     </div>

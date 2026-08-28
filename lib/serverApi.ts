@@ -2,12 +2,12 @@ import { api } from "./api";
 import { Camper, FiltersResponse, CampersResponse } from "@/types/camper";
 
 export const fetchCatalog = async (
-  location: string,
+  location?: string,
   page: number = 1,
   perPage: number = 4,
-  form: string,
-  transmission: string,
-  engine: string,
+  form?: string,
+  transmission?: string,
+  engine?: string,
 ) => {
   const response = await api.get<CampersResponse>("/campers", {
     params: {
