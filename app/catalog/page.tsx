@@ -1,9 +1,10 @@
 import { fetchCatalog } from "@/lib/serverApi";
 import CamperList from "@/components/CamperList/CamperList";
+import EmptyPage from "@/components/EmptyPage/EmptyPage";
 
 const Catalog = async () => {
   const response = await fetchCatalog(
-    "Kyiv",
+    "Dnipro",
     1,
     4,
     "alcove",
@@ -13,8 +14,10 @@ const Catalog = async () => {
 
   return (
     <section>
-      {response?.campers?.length > 0 && (
+      {response?.campers?.length > 0 ? (
         <CamperList campers={response.campers} />
+      ) : (
+        <EmptyPage />
       )}
     </section>
   );

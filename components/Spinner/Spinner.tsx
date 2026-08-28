@@ -34,7 +34,7 @@ export default function Spinner({
             aria-label={ariaLabel}
           />
           <div className={css.loadDescription}>
-            <h3 className={css.loadHeading}>Loading tracks...</h3>
+            <h2 className={css.loadHeading}>Loading tracks...</h2>
             <p className={css.description}>
               Please wait while we fetch the best <br />
               travel trucks for you

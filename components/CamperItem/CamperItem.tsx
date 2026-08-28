@@ -17,7 +17,7 @@ const CamperItem = ({ item }: Props) => {
         width={219}
         alt={item.name}
         loading="lazy"
-      ></Image>
+      />
 
       <div className={css.container}>
         <div className={css.heading}>
