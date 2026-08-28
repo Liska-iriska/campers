@@ -21,3 +21,9 @@ export const fetchCatalog = async (
   });
   return response.data;
 };
+
+export const getSingleCamper = async (id: string) => {
+  console.log("Fetching camper with id:", id);
+  const response = await api.get<Camper>(`/campers/${id}`);
+  return response.data;
+};

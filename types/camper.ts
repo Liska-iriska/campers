@@ -33,3 +33,15 @@ export interface CampersResponse {
   totalPages: number;
   campers: Camper[];
 }
+
+export interface GalleryImage {
+  id: string;
+  camperId: string;
+  thumb: string;
+  original: string;
+  order: number;
+}
+
+export interface CamperDetails extends Camper {
+  gallery: GalleryImage[];
+}

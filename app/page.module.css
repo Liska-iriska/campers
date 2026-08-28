@@ -61,27 +61,41 @@
   color: var(--white);
 }
 
+.errorOverlay {
+  padding: 120px 64px;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+}
+
 .errorContainer {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  border-radius: 16px;
+  padding: 24px;
   width: 100%;
-  max-width: 1440px;
-  padding: 64px;
-  gap: 24px;
+  height: 100%;
+  background: var(--inputs);
 }
 
 .errorTitle {
-  font-size: 40px;
-  font-weight: 700;
-  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
   text-align: center;
+  color: var(--main);
+  margin: 21px 0 16px;
 }
 
 .errorDescription {
-  font-size: 18px;
-  color: #444444;
-  line-height: 28px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
   text-align: center;
+  color: var(--main);
+  margin-bottom: 43px;
 }
 
 .load {
@@ -90,4 +104,93 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+}
+
+.errorPage {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 16px;
+
+  background-color: var(--white);
+}
+
+.errorContent {
+  width: 100%;
+  max-width: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.errorCode {
+  margin-bottom: 16px;
+
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+
+  color: var(--green);
+}
+
+.errorTitle {
+  margin-bottom: 16px;
+
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: var(--black);
+}
+
+.errorMessage {
+  margin-bottom: 32px;
+
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: var(--gray);
+}
+
+.retryButton {
+  min-width: 140px;
+  min-height: 46px;
+
+  padding: 12px 24px;
+
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+
+  color: var(--white);
+  background-color: var(--green);
+
+  border: none;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  transition: background-color 200ms ease;
+}
+
+.retryButton:hover,
+.retryButton:focus-visible {
+  background-color: var(--green-darker);
+}
+
+.retryButton:focus-visible {
+  outline: 2px solid var(--green-darker);
+  outline-offset: 3px;
 }

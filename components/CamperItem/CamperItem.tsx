@@ -8,6 +8,7 @@ type Props = {
 };
 
 const CamperItem = ({ item }: Props) => {
+  console.log("CamperItem id:", item.id);
   return (
     <li className={css.section}>
       <Image

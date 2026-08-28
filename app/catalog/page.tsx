@@ -3,16 +3,16 @@ import CamperList from "@/components/CamperList/CamperList";
 import EmptyPage from "@/components/EmptyPage/EmptyPage";
 
 interface Props {
-  searchParams: {
+  searchParams: Promise<{
     location?: string;
     form?: string;
     transmission?: string;
     engine?: string;
-  };
+  }>;
 }
 
 const Catalog = async ({ searchParams }: Props) => {
-  const { location, form, transmission, engine } = searchParams;
+  const { location, form, transmission, engine } = await searchParams;
 
   const response = await fetchCatalog(
     location ?? undefined,

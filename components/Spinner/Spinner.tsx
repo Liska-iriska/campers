@@ -7,6 +7,7 @@ type SpinnerProps = {
   thickness?: number;
   className?: string;
   ariaLabel?: string;
+  showText?: boolean;
 };
 
 export default function Spinner({
@@ -16,6 +17,7 @@ export default function Spinner({
   thickness = 4,
   className,
   ariaLabel = "Loading",
+  showText = true,
 }: SpinnerProps) {
   return (
     <>
@@ -33,13 +35,15 @@ export default function Spinner({
             role="status"
             aria-label={ariaLabel}
           />
-          <div className={css.loadDescription}>
-            <h2 className={css.loadHeading}>Loading tracks...</h2>
-            <p className={css.description}>
-              Please wait while we fetch the best <br />
-              travel trucks for you
-            </p>
-          </div>
+          {showText && (
+            <div className={css.loadDescription}>
+              <h2 className={css.loadHeading}>Loading tracks...</h2>
+              <p className={css.description}>
+                Please wait while we fetch the best <br />
+                travel trucks for you
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </>
