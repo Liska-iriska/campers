@@ -8,6 +8,7 @@ import css from "./CamperDetails.module.css";
 import CamperGallery from "@/components/Swiper/Swiper";
 import BookingForm from "@/components/BookingForm/BookingForm";
 import Reviews from "@/components/Reviews/Reviews";
+import { notFound } from "next/navigation";
 
 const CamperDetailsClient = () => {
   const { camperId } = useParams<{ camperId: string }>();
@@ -25,7 +26,9 @@ const CamperDetailsClient = () => {
       </div>
     );
   }
-  if (!camper) return null;
+  if (!camper) {
+    notFound();
+  }
 
   return (
     <section className={css.section}>
