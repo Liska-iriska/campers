@@ -17,8 +17,8 @@ API: [`https://campers-api.goit.study`](https://campers-api.goit.study)
 ## Встановлення та запуск
 
 ```bash
-git clone <repo-url>
-cd <project-folder>
+git clone git@github.com:Liska-iriska/campers.git
+cd campers
 npm install
 ```
 
