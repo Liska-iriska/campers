@@ -1,10 +1,17 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import css from "./EmptyPage.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function EmptyState() {
+  const searchParams = useSearchParams();
+  const location = searchParams.get("location");
+
+  const clearFiltersHref = location
+    ? `/catalog?location=${encodeURIComponent(location)}`
+    : "/catalog";
   return (
     <div className={css.overlay}>
       <div className={css.errorContainer}>
@@ -23,7 +30,7 @@ export default function EmptyState() {
           Try adjusting your search or clearing some filters.
         </p>
         <div className={css.btns}>
-          <Link href="/catalog" className={css.btn}>
+          <Link href={clearFiltersHref} className={css.btn}>
             <svg className={css.icon} width="24" height="24">
               <use href="/sprite.svg#icon-close" />
             </svg>

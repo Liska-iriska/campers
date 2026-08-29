@@ -6,15 +6,10 @@
   border-radius: 16px;
   padding: 24px;
   width: 100%;
-  height: 100%;
+  min-height: 840px;
+  max-width: 888px;
+  max-height: 840px;
   background: var(--inputs);
-}
-
-.overlay {
-  padding: 120px 64px;
-  margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
 }
 
 .errorTitle {
