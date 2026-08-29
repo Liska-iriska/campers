@@ -47,7 +47,24 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <body>
-        <Toaster position="top-center" />
+        <Toaster
+          toastOptions={{
+            className: "toaster",
+            duration: 4000,
+            style: {
+              width: "60vw",
+              maxWidth: "60vw",
+              fontSize: "24px",
+              padding: "32px",
+              fontWeight: "700",
+              borderRadius: "16px",
+              background: "#829b91c3",
+              color: "#191919",
+              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.33)",
+            },
+          }}
+          position="top-center"
+        />
         <TanStackProvider>
           <Header />
           <main>{children}</main>
