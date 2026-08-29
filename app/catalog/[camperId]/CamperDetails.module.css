@@ -1,12 +1,13 @@
 .section {
-  padding: 136px 64px;
   max-width: 1440px;
   margin: 0 auto;
+  margin-left: -64px;
 }
 
 .sectionTwo {
-  display: grid;
-  row-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
   max-width: 650px;
 }
@@ -78,6 +79,7 @@
   width: 100%;
   padding: 16px 0;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 .amenity {

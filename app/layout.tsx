@@ -3,6 +3,7 @@ import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import Header from "@/components/Header/Header";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 // export const metadata: Metadata = {
 //   title: "",
@@ -40,14 +41,13 @@ const manrope = Manrope({
 
 export default function RootLayout({
   children,
-  // modal,
 }: Readonly<{
   children: React.ReactNode;
-  // modal: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <body>
+        <Toaster position="top-center" />
         <TanStackProvider>
           <Header />
           <main>{children}</main>
