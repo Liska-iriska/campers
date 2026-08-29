@@ -1,29 +1,29 @@
-//import type { Metadata } from "next";
+import type { Metadata } from "next";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import Header from "@/components/Header/Header";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
-// export const metadata: Metadata = {
-//   title: "",
-//   description: "",
-//   openGraph: {
-//     title: "",
-//     description: "",
-//     url: ``,
-//     siteName: "",
-//     images: [
-//       {
-//         url: "",
-//         width: 1200,
-//         height: 630,
-//         alt: "",
-//       },
-//     ],
-//     type: "article",
-//   },
-// };
+export const metadata: Metadata = {
+  title: "TravelTrucks",
+  description: "You can find everything you want in our catalog",
+  openGraph: {
+    title: "TravelTrucks",
+    description: "You can find everything you want in our catalog",
+    url: `https://campers-beryl-theta.vercel.app`,
+    siteName: "TravelTrucks",
+    images: [
+      {
+        url: "https://campers-beryl-theta.vercel.app/img/main-img@2x.webp",
+        width: 1200,
+        height: 630,
+        alt: "TravelTrucks logo",
+      },
+    ],
+    type: "website",
+  },
+};
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],

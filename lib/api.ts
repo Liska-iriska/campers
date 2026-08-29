@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "https://campers-api.goit.study";
+const baseURL = process.env.NEXT_PUBLIC_DATA_URL;
 
 export const api = axios.create({
   baseURL,

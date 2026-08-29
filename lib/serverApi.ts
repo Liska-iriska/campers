@@ -1,5 +1,5 @@
 import { api } from "./api";
-import { Camper, CampersResponse } from "@/types/camper";
+import { CamperDetails, CampersResponse } from "@/types/camper";
 
 export const fetchCatalog = async (
   location?: string,
@@ -23,7 +23,6 @@ export const fetchCatalog = async (
 };
 
 export const getSingleCamper = async (id: string) => {
-  console.log("Fetching camper with id:", id);
-  const response = await api.get<Camper>(`/campers/${id}`);
+  const response = await api.get<CamperDetails>(`/campers/${id}`);
   return response.data;
 };
