@@ -64,7 +64,7 @@ export default function Sidebar() {
               id="location"
               className={css.input}
               type="text"
-              placeholder="Kyiv"
+              placeholder="City"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
