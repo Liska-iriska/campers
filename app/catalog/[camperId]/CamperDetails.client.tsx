@@ -89,8 +89,10 @@ const CamperDetailsClient = () => {
           </div>
         </div>
       </div>
-      <Reviews camperId={camperId} />
-      <BookingForm camperId={camperId} />
+      <div className={css.table}>
+        <Reviews camperId={camperId} />
+        <BookingForm camperId={camperId} />
+      </div>
     </section>
   );
 };
