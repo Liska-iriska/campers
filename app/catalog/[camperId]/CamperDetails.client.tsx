@@ -6,6 +6,8 @@ import { getSingleCamper } from "@/lib/clientApi";
 import Spinner from "@/components/Spinner/Spinner";
 import css from "./CamperDetails.module.css";
 import CamperGallery from "@/components/Swiper/Swiper";
+import BookingForm from "@/components/BookingForm/BookingForm";
+import Reviews from "@/components/Reviews/Reviews";
 
 const CamperDetailsClient = () => {
   const { camperId } = useParams<{ camperId: string }>();
@@ -87,6 +89,8 @@ const CamperDetailsClient = () => {
           </div>
         </div>
       </div>
+      <Reviews camperId={camperId} />
+      <BookingForm camperId={camperId} />
     </section>
   );
 };
