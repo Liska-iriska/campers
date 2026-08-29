@@ -1,6 +1,7 @@
 import { fetchCatalog } from "@/lib/serverApi";
 import CamperList from "@/components/CamperList/CamperList";
 import EmptyPage from "@/components/EmptyPage/EmptyPage";
+import css from "./@sidebar/Sidebar.module.css";
 
 interface Props {
   searchParams: Promise<{
@@ -24,7 +25,7 @@ const Catalog = async ({ searchParams }: Props) => {
   );
 
   return (
-    <section>
+    <section className={css.mainSection}>
       {response?.campers?.length > 0 ? (
         <CamperList campers={response.campers} />
       ) : (

@@ -1,13 +1,11 @@
 .layoutStyle {
   display: flex;
-  margin: 0 auto;
   gap: 64px;
   max-width: 1440px;
-}
-
-.aside {
-  padding: 120px 0 0;
+  width: 100%;
   margin: 0 auto;
+  justify-content: center;
+  padding: 120px 64px 0;
 }
 
 .children {
@@ -36,4 +34,9 @@
 .menuLink:hover {
   background-color: #444;
   color: #ddd;
+}
+
+.mainSection {
+  width: 100%;
+  height: 100%;
 }
